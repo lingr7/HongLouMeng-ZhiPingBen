@@ -1,0 +1,163 @@
+
+\includegraphics{../Images/00012}
+\includegraphics[width=3mm]{../Images/00012}\footnotesize 
+\includegraphics{../Images/00011}
+\includegraphics[width=3mm]{../Images/00011}\footnotesize 
+\includegraphics{../Images/00010}
+\includegraphics[width=3mm]{../Images/00010}\footnotesize 
+\includegraphics{../Images/00002}
+\includegraphics[width=3mm]{../Images/00002}
+\includegraphics{../Images/00003}
+\includegraphics[width=3mm]{../Images/00003}
+\includegraphics{../Images/00004}
+\includegraphics[width=3mm]{../Images/00004}
+\includegraphics{../Images/00005}
+\includegraphics[width=3mm]{../Images/00005}
+\includegraphics{../Images/00006}
+\includegraphics[width=3mm]{../Images/00006}
+\includegraphics{../Images/00007}
+\includegraphics[width=3mm]{../Images/00007}
+\includegraphics{../Images/00008}
+\includegraphics[width=3mm]{../Images/00008}
+\includegraphics{../Images/00009}
+\includegraphics[width=3mm]{../Images/00009}
+
+
+
+
+\subsection%81
+\chapter
+
+%到时候依样配置images和book2同级
+
+\includegraphics{Images/00010.gif}%320
+\includegraphics[width=3mm]{../Images/00010}\footnotesize \kaishu 
+
+\includegraphics{Images/00011.gif}%381
+\includegraphics[width=3mm]{../Images/00011}\footnotesize \kaishu 
+
+\includegraphics{Images/00012.gif}%1558
+\includegraphics[width=3mm]{../Images/00012}\footnotesize \kaishu 
+
+\includegraphics{Images/00002.gif}%2不可能吧10 51 共61 1455
+\includegraphics[width=3mm]{../Images/00002}
+
+\includegraphics{Images/00003.gif}%1 628
+\includegraphics[width=3mm]{../Images/00003}
+
+\includegraphics{Images/00004.gif}%2  1381
+\includegraphics[width=3mm]{../Images/00004}
+
+\includegraphics{Images/00005.gif}%5 241
+\includegraphics[width=3mm]{../Images/00005}
+
+\includegraphics{Images/00006.gif}%1  631
+\includegraphics[width=3mm]{../Images/00006}
+
+\includegraphics{Images/00007.gif}%1  8
+\includegraphics[width=3mm]{../Images/00007}
+
+\includegraphics{Images/00008.gif}%3
+\includegraphics[width=3mm]{../Images/00008}
+
+\includegraphics{Images/00009.gif}%36
+\includegraphics[width=3mm]{../Images/00009}
+
+\href{../Text/part0005_split_000.html\#lnkback_2_a}{\textsuperscript{②}}%在文章内部
+这是脂评本有epub转来的tex文件中的一章尾标
+
+{\href{../Text/part0005_split_000.html\#navto_2_a}{②}
+这是章节尾部
+
+看来得自己敲了，脚注说起来不算多，和注释一样，基本差不多。
+
+\href{../Text/part0005_split_000.html\#lnkback_2_a}{\textsuperscript{②}}\label{lnkback_2_a}
+决定采用平常脚注形式，真得一章尾注可跳跃，太麻烦了
+脚注只能一条一条的来输了，目前只有如此。
+脚注先不管，先搞出一本书来吧
+坑爹了，缩进不对，是epub的病，css缩进不对，可是我已经搞了这一套，好久了，累死我了，这工程量太大了。
+使用排版助手可以去除这个段前空格，防多出的缩进，可是txt的编码让texstudio出错，必须在notepad++转换为UTF-8无BOM编码，才能编译，出现了从前诺基亚1682C看txt乱码的情况了。
+终于搞定第二章，这个操作，搞80回，真的也好累，我直接整个给它排版助手一下，在转为txt自动分割章节，在转回tex文件
+
+
+第([(零|〇)一二三四五六七八九十百千]+?)回 (.*?)
+
+没有找到那种自动的章节分割器，自学正则表达式
+把每一章的那个回字和标签去了，注释掉，去了恐怕以后要用，接着把txt文件分割成一个一个录入主文件main.tex来编译，这样记笔记的时候也方便，那么大的tex文件，Typora受不了。
+
+\subsubsection{\texorpdfstring{第([(零|〇)一二三四五六七八九十百千]+?)回}{第([(零|〇)一二三四五六七八九十百千]+?)回}}
+
+替换成%第([(零|〇)一二三四五六七八九十百千]+?)回 (.*?)
+
+\subsubsection{\texorpdfstring{{(第.{1,5}回.*)}}{(第.{1,5}回.*)}}
+
+\\subsubsection\{\\texorpdfstring\{\{(第.{1,5}回.*)\}\}\{(第.{1,5}回.*)\}\}%80处匹配，果然是80回，应该在前面添加章节分割标记，并且保留%（第.{1,5}回.*)
+
+查找和分割标记可以在notepad++里找啊，我蠢啊
+<hr class="sigil_split_marker"/>%（第.{1,5}回.*)
+\\protect\\hypertarget\{part00[0-9][0-9]_split_000.html\}\{\}\{\}%81个，这个直接可以删掉啊，用空格替代，我傻了想把它分割成单个html文件，这个用来换这个章节分割标记刚刚好
+\\subsubsection\{\\texorpdfstring\{\{(第.{1,5}回.*)\}\}
+这一段换成%不编译即可
+
+\{(第.{1,5}回.*)\}\}
+
+感觉这文件分割之前的东西要好好保留一下，可能方便用，毕竟是单个文件，说不定就可以整体编译呢，没有说不可能啊。
+除了某些插图，格式丰富的章节，其实应该可以整体的编译出来的保留一份整体tex只有好处没有坏处，因为合并很麻烦啊
+
+00024.gif和00032.gif要修改标记一下，别的.gif去掉即可，等一下手太快了。先放一下，这些字的大小的在总文件里改好，不然到了分割的文件里大海捞针，正如epub没有优化的，脚注和自己的笔记同等待遇，边读边码字，图片一波弄好
+改为00024.gitf了,其他直接空白，35处
+jpeg的都要留意一下。
+
+原来脚注共有308处，麻烦了，脚注这么多，没有批量的办法啊？我要是个程序员就好了
+中间文件也要保存啊，不知道啥时候就需要回头中间产物，感觉是化学一样。
+在md文件里是啥样的啊。
+00030.gif第七十三回尾部
+00031.gif第七十四回尾
+
+
+
+众人呵呵笑道：``该罚，该罚！这句更不通，先还可恕。''说着便要筛酒。宝玉笑道：``押韵就好。''薛蟠道：``令官都准了，你们闹什么？''众人听说，方罢了。云儿笑道：``下两句越发难说了，我替你说罢。''薛蟠道：``胡说！当真的我就没好的了！听我说罢：女儿喜，洞房花烛朝慵起。''众人听了，都诧异道：``这句何其太韵？''薛蟠又道：``女儿乐，一根\includegraphics[width=8mm]{Images/00022.gif}往里戳。''
+
+
+第十九回尾部00025.gif
+
+
+茗烟因问：``二爷为何不看这样的好戏？''宝玉道：``看了半日，怪烦的，出来逛逛，就遇见你们了。这会子作什么呢？''茗烟\includegraphics[width=4mm]{Images/00025.gif}\includegraphics[width=4mm]{Images/00025.gif}\href{../Text/part0023_split_000.html\#lnkback_4_a}{\textsuperscript{④}}{\includegraphics[width=3mm]{../Images/00004}\includegraphics[width=3mm]{../Images/00010}\footnotesize \kaishu \includegraphics[width=
+3mm]{Images/00026.gif}，音希。\includegraphics{Images/00026.gif}\includegraphics{Images/00026.gif}，笑貌。}笑道：``这会子没人知道，我悄悄的引二爷往城外逛逛去，一会子再往这里来，他们就不知道了。''{\includegraphics[width=3mm]{../Images/00003}\includegraphics[width=3mm]{../Images/00012}\footnotesize \kaishu 
+
+第十五回尾部
+
+
+
+
+说着，引人进入房内。只见这几间房内收拾的与别处不同，{\includegraphics[width=3mm]{../Images/00004}\includegraphics[width=3mm]{../Images/00011}\footnotesize \kaishu 特为青埂峰下凄凉与别处不同耳。}竟分不出间隔来的，{\includegraphics[width=3mm]{../Images/00003}\includegraphics[width=3mm]{../Images/00012}\footnotesize \kaishu 新奇希见之式。}原来四面皆是雕空玲珑木板，或``流云百蝠''，或``岁寒三友''，或山水人物，或翎毛花卉，或集锦，或博古，{\includegraphics[width=3mm]{../Images/00003}\includegraphics[width=3mm]{../Images/00012}\footnotesize \kaishu 花样周全之极！然必用下文者，正是作者无聊，撰出新异笔墨，使观者眼目一新。所谓集小说之大成，游戏笔墨，雕虫之技，无所不备，可谓善戏者矣。又供诸人同同一戏，妙极！}或\includegraphics{Images/00024.gitf}，{\includegraphics[width=3mm]{../Images/00003}\includegraphics[width=3mm]{../Images/00012}\footnotesize \kaishu 前金、玉篆文是可考正篆，今则从俗花样，真是醒睡魔。其中诗词雅谜以及各种风俗学问，一概不必究，只据此等处便是一绝。}各种花样，皆是名手雕镂，五彩销金嵌宝的。
+
+
+
+18．批书亲见一篇薄命赋特出英莲{（叙英莲遭遇一段墨眉）}
+
+19．无名之症即是病之名而反曰无像极{（``已得无名之病''句侧批）}
+
+20．庙了结文字伏下伏又千里线胡卢字样起胡卢字样结盖一部书皆系胡提之意也知乎{（充发门子一段墨眉）}
+
+国瑶按：第一册封面下粘一长方形字条，长五寸，宽约三寸半，左下方撕缺，可见``\includegraphics{Images/00032.gitf}录''字样，墨笔书写，内容如下：
+
+紫雪溟蒙楝花老蛙鸣厅事多青草庐江太守访故人浔江并驾能倾倒两家门第皆列戟中年领郡稍迟早文采风流政有馀相逢甚欲抒怀抢于时亦有不速客合坐清炎斗炎嫡岂无炙鲤与寒鷃不乏蒸梨兼蝓芫瀹枣二簋用享古则然宾酬主醉今诚少亿首宿卫明光宫楞伽山人貌狡好马曹狗监共嘲难而今触痛伤怀抱交情独剩张公子晚识施君通纻红缟多闻直谅复奚疑此乐不殊鱼在藻始觉诗书是坦途未妨车轱当行潦家家争唱饮水词纳兰小字几曾知布袍廓落任安在说向名场尔许时
+
+
+
+%{{第八回}}{第八回}}
+
+\chapter{薛宝钗小恙梨香院　贾宝玉大醉绛芸轩}\label{part0012_split_000.htmlux5cux23calibre_pb_0}
+
+{\includegraphics[width=3mm]{../Images/00005}幻情浓处故多嗔，岂独颦儿爱妒人。莫把心思劳展转，百年事业总非真。}
+就差308条的脚注了，把那些东西删了？那样就无法确认脚注的位置了。
+
+
+问道：``我们肏屁股不肏屁股，管你\includegraphics[width=4mm]{../images/00022}相干？横竖没肏你爹去罢了！你是好小子，出来动一动你茗大爷！''吓的满屋中子弟都怔怔的痴望。贾瑞忙吆喝：``茗烟不得撒野！''金荣气黄了脸，说：``反了！奴才小子都敢如此，我和你主子说。''便夺手要去抓打宝玉秦钟。
+
+
+说着，引人进入房内。只见这几间房内收拾的与别处不同，{\includegraphics[width=3mm]{../Images/00004}\includegraphics[width=3mm]{../Images/00011}\footnotesize \kaishu 特为青埂峰下凄凉与别处不同耳。}竟分不出间隔来的，{\includegraphics[width=3mm]{../Images/00003}\includegraphics[width=3mm]{../Images/00012}\footnotesize \kaishu 新奇希见之式。}原来四面皆是雕空玲珑木板，或``流云百蝠''，或``岁寒三友''，或山水人物，或翎毛花卉，或集锦，或博古，{\includegraphics[width=3mm]{../Images/00003}\includegraphics[width=3mm]{../Images/00012}\footnotesize \kaishu 花样周全之极！然必用下文者，正是作者无聊，撰出新异笔墨，使观者眼目一新。所谓集小说之大成，游戏笔墨，雕虫之技，无所不备，可谓善戏者矣。又供诸人同同一戏，妙极！}或\includegraphics{../images/00024.gitf}，{\includegraphics[width=3mm]{../Images/00003}\includegraphics[width=3mm]{../Images/00012}\footnotesize \kaishu 前金、玉篆文是可考正篆，今则从俗花样，真是醒睡魔。其中诗词雅谜以及各种风俗学问，一概不必究，只据此等处便是一绝。}各种花样，皆是名手雕镂，五彩销金嵌宝的。{\includegraphics[width=3mm]{../Images/00003}\includegraphics[width=3mm]{../Images/00012}\footnotesize \kaishu 至此方见一朱彩之处，亦必如此式方可。可笑近之园庭，行动便以粉油从事。}一槅一槅，或有贮书处，或有设鼎处，或安置笔砚处，或供花设瓶、安放盆景处，其槅各式各样，或天圆地方，或葵花蕉叶，或连环半璧。真是花团锦簇，剔透玲珑。倏尔五色纱糊就，竟系小窗；倏尔彩绫轻覆，竟系幽户。{\includegraphics[width=3mm]{../Images/00003}\includegraphics[width=3mm]{../Images/00012}\footnotesize \kaishu 精工之极！}且满墙满壁，皆系随依古董玩器之形抠成的槽子。诸如琴、剑、悬瓶、{\includegraphics[width=3mm]{../Images/00003}\includegraphics[width=3mm]{../Images/00012}\footnotesize \kaishu 悬于壁上之瓶也。}桌屏之类，虽悬于壁，却都是与壁相平的。{\includegraphics[width=3mm]{../Images/00003}\includegraphics[width=3mm]{../Images/00012}\footnotesize \kaishu 皆系人意想不到、目所未见之文。若云拟编虚想出来，焉能如此？◇一段极清极细。后文鸳鸯瓶、紫玛瑙碟、西洋酒、{(令)}{[}金{]}自行船等文，不必细表。}众人都赞：``好精致想头！难为怎么想来？''{\includegraphics[width=3mm]{../Images/00003}\includegraphics[width=3mm]{../Images/00012}\footnotesize \kaishu 谁不如此赞？}
+
+1月29日暂且停手，到2月7日终于完成，文件格式之间的转换工作量太大，主要是脂评本，真的格式丰富，插了那么多图，还好有epub的底子，转tex，notepad++正则表达式处理，然后，sigil分割，每一步都不容易，分割是一步，正则表达式是另一步，还有所有的标注图，都化成了矢量，由，svg转，markdown虽然应用广泛，不过还是适合小文件，大文件，红楼梦这种，就得卡死，阅读和编译分离，其实就是那些脂评，影响了编辑器端的阅读体验，还是看代码的感觉，而不是读书，这个项目耗时久，也花了我 很多的精力，主要是2月1日之后，活的醉生梦死，所以很困扰
+好蠢啊 ，现在才想起来有手套，不至于2月1日之前被冻得那么惨。
