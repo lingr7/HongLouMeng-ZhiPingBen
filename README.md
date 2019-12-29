@@ -19,7 +19,3 @@
 新样式 ElegantPar 发布-LaTeX工作室
 
   http://www.latexstudio.net/archives/2528
-
-就是这样吧，没别的东西了，封面还没加上心酸。
-
-使用了Git Bush 默认编辑器为vs code来管理这个仓库，使用命令 $ code readme.md 就调出了这个界面，还是比较高兴的。
