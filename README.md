@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-04-24 15:31:30
+ * @LastEditTime: 2020-04-27 14:49:29
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \HongLouMeng-ZhiPingBen\README.md
+ -->
 # HongLouMeng ZhiPingBen
 
 最初的预览目标版本
@@ -45,3 +53,10 @@
 
 
 ![第六回](https://picture-1258475985.cos.ap-chengdu.myqcloud.com/img20200427143158.png)
+
+## Todo
+- [ ] 诗句
+
+- [ ] 对联
+
+- [ ] 脚注
