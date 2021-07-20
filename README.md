@@ -8,6 +8,11 @@
  -->
 # HongLouMeng ZhiPingBen
 
+
+# 迁移
+已经迁移至：https://gitee.com/lingr7/The-Story-of-the-Stone/
+
+
 最初的预览目标版本
 
 [拙编《红楼梦脂评汇校本》出版，发布定稿电子版----------_kolistan_新浪博客 ](http://blog.sina.com.cn/s/blog_5057dca80101es12.html)
