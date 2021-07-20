@@ -12,7 +12,7 @@
 # 迁移
 已经迁移至：https://gitee.com/lingr7/The-Story-of-the-Stone/
 
-
+推荐：上译厂刘风，张国立 红楼梦有声书 https://www.ximalaya.com/renwenjp/20654769/
 最初的预览目标版本
 
 [拙编《红楼梦脂评汇校本》出版，发布定稿电子版----------_kolistan_新浪博客 ](http://blog.sina.com.cn/s/blog_5057dca80101es12.html)
