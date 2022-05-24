@@ -1,0 +1,151 @@
+\documentclass[a4paper]{book}
+\usepackage{lshort-zh-cn-style}
+% \usepackage{varwidth} %% 提供 varwidth 环境
+% \usepackage{caption}
+% \usepackage{subfigure}
+% \usepackage[titles,subfigure]{tocloft}
+% \setlength{\cftchapnumwidth}{8\ccwd}
+
+\def\lshortversionoriginal{6.4}
+\def\lshortdateoriginal{March 9, 2021}
+\def\lshortversioncn{6.03}
+
+\renewcommand{\label}[1]{\thechapter:#1}
+\ctexset{
+	chapter = {
+		format += \centering,
+		name = {第,回},
+		nameformat += \chapternameformat,
+		titleformat = \chaptertitleformat
+	}
+}
+\newcommand{\chapternameformat}[1]{\kaishu #1}
+\newcommand{\chaptertitleformat}[1]{%
+	\CTEXifname{\parbox[t]{8\ccwd}{#1}}{#1}}
+
+
+\renewcommand\thefootnote{\ding{\numexpr171+\value{footnote}}}
+
+
+% \usepackage{graphbox}
+% \usepackage{amssymb}
+% \usepackage{pifont}
+% \usepackage{hyperref}
+% \hypersetup{
+% 	colorlinks=true,
+% 	bookmarks=true,
+% 	bookmarksopen=true,
+% 	pdfpagemode=FullScreen,
+% 	pdfstartview=Fit,
+% 	pdftitle={红楼梦脂评汇校本},
+% 	pdfauthor={曹雪芹}
+% 	hyperfootnotes=true%添加脚注超链接
+% }
+\hypersetup{%
+  pdftitle={红楼梦脂评汇校本},%
+  pdfkeywords={LaTeX, LaTeX2e},
+  pdfcreator={lingr7}
+}
+
+% \newcounter{minutes}
+\makeindex
+\begin{document}
+\author{曹雪芹}
+\title{红楼梦脂评汇校本}
+\date{\today}
+\maketitle
+\pagenumbering{Alph}
+\frontmatter
+\input{./TeX_files/Information}
+\input{./TeX_files/introduction}
+\input{./TeX_files/case}	  
+\tableofcontents
+\mainmatter
+\input{./TeX_files/chapter01}
+\input{./TeX_files/chapter02}
+\input{./TeX_files/chapter03}
+\input{./TeX_files/chapter04}
+\input{./TeX_files/chapter05}
+\input{./TeX_files/chapter06}
+\input{./TeX_files/chapter07}
+\input{./TeX_files/chapter08}
+\input{./TeX_files/chapter09}
+\input{./TeX_files/chapter10}
+\input{./TeX_files/chapter11}
+\input{./TeX_files/chapter12}
+\input{./TeX_files/chapter13}
+\input{./TeX_files/chapter14}
+\input{./TeX_files/chapter15}
+\input{./TeX_files/chapter16}
+\input{./TeX_files/chapter17}
+\input{./TeX_files/chapter18}
+\input{./TeX_files/chapter19}
+\input{./TeX_files/chapter20}
+\input{./TeX_files/chapter21}
+\input{./TeX_files/chapter22}
+\input{./TeX_files/chapter23}
+\input{./TeX_files/chapter24}
+\input{./TeX_files/chapter25}
+\input{./TeX_files/chapter26}
+\input{./TeX_files/chapter27}
+\input{./TeX_files/chapter28}
+\input{./TeX_files/chapter29}
+\input{./TeX_files/chapter30}
+\input{./TeX_files/chapter31}
+\input{./TeX_files/chapter32}
+\input{./TeX_files/chapter33}
+\input{./TeX_files/chapter34}
+\input{./TeX_files/chapter35}
+\input{./TeX_files/chapter36}
+\input{./TeX_files/chapter37}
+\input{./TeX_files/chapter38}
+\input{./TeX_files/chapter39}
+\input{./TeX_files/chapter40}
+\input{./TeX_files/chapter41}
+\input{./TeX_files/chapter42}
+\input{./TeX_files/chapter43}
+\input{./TeX_files/chapter44}
+\input{./TeX_files/chapter45}
+\input{./TeX_files/chapter46}
+\input{./TeX_files/chapter47}
+\input{./TeX_files/chapter48}
+\input{./TeX_files/chapter49}
+\input{./TeX_files/chapter50}
+\input{./TeX_files/chapter51}
+\input{./TeX_files/chapter52}
+\input{./TeX_files/chapter53}
+\input{./TeX_files/chapter54}
+\input{./TeX_files/chapter55}
+\input{./TeX_files/chapter56}
+\input{./TeX_files/chapter57}
+\input{./TeX_files/chapter58}
+\input{./TeX_files/chapter59}
+\input{./TeX_files/chapter60}
+\input{./TeX_files/chapter61}
+\input{./TeX_files/chapter62}
+\input{./TeX_files/chapter63}
+\input{./TeX_files/chapter64}
+\input{./TeX_files/chapter65}
+\input{./TeX_files/chapter66}
+\input{./TeX_files/chapter67}
+\input{./TeX_files/chapter68}
+\input{./TeX_files/chapter69}
+\input{./TeX_files/chapter70}
+\input{./TeX_files/chapter71}
+\input{./TeX_files/chapter72}
+\input{./TeX_files/chapter73}
+\input{./TeX_files/chapter74}
+\input{./TeX_files/chapter75}
+\input{./TeX_files/chapter76}
+\input{./TeX_files/chapter77}
+\input{./TeX_files/chapter78}
+\input{./TeX_files/chapter79}
+\input{./TeX_files/chapter80}
+
+% %
+\backmatter
+\input{./TeX_files/appendix1}
+\input{./TeX_files/appendix2}
+\input{./TeX_files/appendix3}
+\input{./TeX_files/note}
+\end{document}
